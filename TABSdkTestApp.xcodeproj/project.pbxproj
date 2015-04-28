@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7670122B1ACBD2C3007216BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7670122A1ACBD2C3007216BB /* main.m */; };
+		7670122E1ACBD2C3007216BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7670122D1ACBD2C3007216BB /* AppDelegate.m */; };
+		767012311ACBD2C3007216BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767012301ACBD2C3007216BB /* ViewController.m */; };
+		767012341ACBD2C3007216BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767012321ACBD2C3007216BB /* Main.storyboard */; };
+		767012361ACBD2C3007216BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767012351ACBD2C3007216BB /* Images.xcassets */; };
+		767012391ACBD2C3007216BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 767012371ACBD2C3007216BB /* LaunchScreen.xib */; };
+		767012451ACBD2C3007216BB /* TABSdkTestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 767012441ACBD2C3007216BB /* TABSdkTestAppTests.m */; };
+		767012841ACBD3B1007216BB /* libTabSdk-ios Mock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7670125F1ACBD3B1007216BB /* libTabSdk-ios Mock.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7670123F1ACBD2C3007216BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7670121D1ACBD2C3007216BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 767012241ACBD2C3007216BB;
+			remoteInfo = TABSdkTestApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		767012251ACBD2C3007216BB /* TABSdkTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TABSdkTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		767012291ACBD2C3007216BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7670122A1ACBD2C3007216BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7670122C1ACBD2C3007216BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7670122D1ACBD2C3007216BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7670122F1ACBD2C3007216BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		767012301ACBD2C3007216BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		767012331ACBD2C3007216BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		767012351ACBD2C3007216BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		767012381ACBD2C3007216BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7670123E1ACBD2C3007216BB /* TABSdkTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TABSdkTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		767012431ACBD2C3007216BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		767012441ACBD2C3007216BB /* TABSdkTestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TABSdkTestAppTests.m; sourceTree = "<group>"; };
+		767012501ACBD376007216BB /* Mantle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Mantle.h; path = Mantle/Mantle.h; sourceTree = "<group>"; };
+		767012511ACBD376007216BB /* MTLJSONAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTLJSONAdapter.h; path = Mantle/MTLJSONAdapter.h; sourceTree = "<group>"; };
+		767012521ACBD376007216BB /* MTLManagedObjectAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTLManagedObjectAdapter.h; path = Mantle/MTLManagedObjectAdapter.h; sourceTree = "<group>"; };
+		767012531ACBD376007216BB /* MTLModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTLModel.h; path = Mantle/MTLModel.h; sourceTree = "<group>"; };
+		767012541ACBD376007216BB /* MTLModel+NSCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MTLModel+NSCoding.h"; path = "Mantle/MTLModel+NSCoding.h"; sourceTree = "<group>"; };
+		767012551ACBD376007216BB /* MTLReflection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTLReflection.h; path = Mantle/MTLReflection.h; sourceTree = "<group>"; };
+		767012561ACBD376007216BB /* MTLValueTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTLValueTransformer.h; path = Mantle/MTLValueTransformer.h; sourceTree = "<group>"; };
+		767012571ACBD376007216BB /* NSArray+MTLManipulationAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSArray+MTLManipulationAdditions.h"; path = "Mantle/NSArray+MTLManipulationAdditions.h"; sourceTree = "<group>"; };
+		767012581ACBD376007216BB /* NSDictionary+MTLManipulationAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MTLManipulationAdditions.h"; path = "Mantle/NSDictionary+MTLManipulationAdditions.h"; sourceTree = "<group>"; };
+		767012591ACBD376007216BB /* NSError+MTLModelException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSError+MTLModelException.h"; path = "Mantle/NSError+MTLModelException.h"; sourceTree = "<group>"; };
+		7670125A1ACBD376007216BB /* NSObject+MTLComparisonAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+MTLComparisonAdditions.h"; path = "Mantle/NSObject+MTLComparisonAdditions.h"; sourceTree = "<group>"; };
+		7670125B1ACBD376007216BB /* NSValueTransformer+MTLInversionAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLInversionAdditions.h"; path = "Mantle/NSValueTransformer+MTLInversionAdditions.h"; sourceTree = "<group>"; };
+		7670125C1ACBD376007216BB /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLPredefinedTransformerAdditions.h"; path = "Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.h"; sourceTree = "<group>"; };
+		7670125D1ACBD3B1007216BB /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = TABSdk/Constants.h; sourceTree = "<group>"; };
+		7670125E1ACBD3B1007216BB /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Errors.h; path = TABSdk/Errors.h; sourceTree = "<group>"; };
+		7670125F1ACBD3B1007216BB /* libTabSdk-ios Mock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTabSdk-ios Mock.a"; path = "TABSdk/libTabSdk-ios Mock.a"; sourceTree = "<group>"; };
+		767012601ACBD3B1007216BB /* TABActivitiesClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivitiesClient.h; path = TABSdk/TABActivitiesClient.h; sourceTree = "<group>"; };
+		767012611ACBD3B1007216BB /* TABActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivity.h; path = TABSdk/TABActivity.h; sourceTree = "<group>"; };
+		767012621ACBD3B1007216BB /* TABActivityDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivityDetailResponse.h; path = TABSdk/TABActivityDetailResponse.h; sourceTree = "<group>"; };
+		767012631ACBD3B1007216BB /* TABActivityListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivityListResponse.h; path = TABSdk/TABActivityListResponse.h; sourceTree = "<group>"; };
+		767012641ACBD3B1007216BB /* TABAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABAnswer.h; path = TABSdk/TABAnswer.h; sourceTree = "<group>"; };
+		767012651ACBD3B1007216BB /* TABBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBarcode.h; path = TABSdk/TABBarcode.h; sourceTree = "<group>"; };
+		767012661ACBD3B1007216BB /* TABBookingCancelResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingCancelResponse.h; path = TABSdk/TABBookingCancelResponse.h; sourceTree = "<group>"; };
+		767012671ACBD3B1007216BB /* TABBookingConfirmResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingConfirmResponse.h; path = TABSdk/TABBookingConfirmResponse.h; sourceTree = "<group>"; };
+		767012681ACBD3B1007216BB /* TABBookingDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingDetail.h; path = TABSdk/TABBookingDetail.h; sourceTree = "<group>"; };
+		767012691ACBD3B1007216BB /* TABBookingDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingDetailResponse.h; path = TABSdk/TABBookingDetailResponse.h; sourceTree = "<group>"; };
+		7670126A1ACBD3B1007216BB /* TABBookingPreconfirmResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingPreconfirmResponse.h; path = TABSdk/TABBookingPreconfirmResponse.h; sourceTree = "<group>"; };
+		7670126B1ACBD3B1007216BB /* TABCancellationFee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABCancellationFee.h; path = TABSdk/TABCancellationFee.h; sourceTree = "<group>"; };
+		7670126C1ACBD3B1007216BB /* TABComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABComment.h; path = TABSdk/TABComment.h; sourceTree = "<group>"; };
+		7670126D1ACBD3B1007216BB /* TABConfirmationCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABConfirmationCode.h; path = TABSdk/TABConfirmationCode.h; sourceTree = "<group>"; };
+		7670126E1ACBD3B1007216BB /* TABDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABDescription.h; path = TABSdk/TABDescription.h; sourceTree = "<group>"; };
+		7670126F1ACBD3B1007216BB /* TABFee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABFee.h; path = TABSdk/TABFee.h; sourceTree = "<group>"; };
+		767012701ACBD3B1007216BB /* TABHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABHolder.h; path = TABSdk/TABHolder.h; sourceTree = "<group>"; };
+		767012711ACBD3B1007216BB /* TABImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABImage.h; path = TABSdk/TABImage.h; sourceTree = "<group>"; };
+		767012721ACBD3B1007216BB /* TABInvoiceCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABInvoiceCompany.h; path = TABSdk/TABInvoiceCompany.h; sourceTree = "<group>"; };
+		767012731ACBD3B1007216BB /* TABModality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABModality.h; path = TABSdk/TABModality.h; sourceTree = "<group>"; };
+		767012741ACBD3B1007216BB /* TABOperationDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABOperationDate.h; path = TABSdk/TABOperationDate.h; sourceTree = "<group>"; };
+		767012751ACBD3B1007216BB /* TABPagination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPagination.h; path = TABSdk/TABPagination.h; sourceTree = "<group>"; };
+		767012761ACBD3B1007216BB /* TABPax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPax.h; path = TABSdk/TABPax.h; sourceTree = "<group>"; };
+		767012771ACBD3B1007216BB /* TABPaymentInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPaymentInformation.h; path = TABSdk/TABPaymentInformation.h; sourceTree = "<group>"; };
+		767012781ACBD3B1007216BB /* TABPriceBreakdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPriceBreakdown.h; path = TABSdk/TABPriceBreakdown.h; sourceTree = "<group>"; };
+		767012791ACBD3B1007216BB /* TABPriceSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPriceSegment.h; path = TABSdk/TABPriceSegment.h; sourceTree = "<group>"; };
+		7670127A1ACBD3B1007216BB /* TABQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABQuestion.h; path = TABSdk/TABQuestion.h; sourceTree = "<group>"; };
+		7670127B1ACBD3B1007216BB /* TABSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABSdk.h; path = TABSdk/TABSdk.h; sourceTree = "<group>"; };
+		7670127C1ACBD3B1007216BB /* TABServerError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServerError.h; path = TABSdk/TABServerError.h; sourceTree = "<group>"; };
+		7670127D1ACBD3B1007216BB /* TABServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServerResponse.h; path = TABSdk/TABServerResponse.h; sourceTree = "<group>"; };
+		7670127E1ACBD3B1007216BB /* TABServiceDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServiceDetail.h; path = TABSdk/TABServiceDetail.h; sourceTree = "<group>"; };
+		7670127F1ACBD3B1007216BB /* TABServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServiceRequest.h; path = TABSdk/TABServiceRequest.h; sourceTree = "<group>"; };
+		767012801ACBD3B1007216BB /* TABSupplement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABSupplement.h; path = TABSdk/TABSupplement.h; sourceTree = "<group>"; };
+		767012811ACBD3B1007216BB /* TABSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABSupplier.h; path = TABSdk/TABSupplier.h; sourceTree = "<group>"; };
+		767012821ACBD3B1007216BB /* TABValuedActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABValuedActivity.h; path = TABSdk/TABValuedActivity.h; sourceTree = "<group>"; };
+		767012831ACBD3B1007216BB /* TABVoucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABVoucher.h; path = TABSdk/TABVoucher.h; sourceTree = "<group>"; };
+		767012851ACBD3F9007216BB /* TABSdkTestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TABSdkTestApp-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		767012221ACBD2C3007216BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767012841ACBD3B1007216BB /* libTabSdk-ios Mock.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7670123B1ACBD2C3007216BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7670121C1ACBD2C3007216BB = {
+			isa = PBXGroup;
+			children = (
+				767012271ACBD2C3007216BB /* TABSdkTestApp */,
+				767012411ACBD2C3007216BB /* TABSdkTestAppTests */,
+				767012261ACBD2C3007216BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		767012261ACBD2C3007216BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				767012251ACBD2C3007216BB /* TABSdkTestApp.app */,
+				7670123E1ACBD2C3007216BB /* TABSdkTestAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		767012271ACBD2C3007216BB /* TABSdkTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				7670124F1ACBD30D007216BB /* Mantle */,
+				7670124E1ACBD303007216BB /* TABSdk */,
+				7670122C1ACBD2C3007216BB /* AppDelegate.h */,
+				7670122D1ACBD2C3007216BB /* AppDelegate.m */,
+				7670122F1ACBD2C3007216BB /* ViewController.h */,
+				767012301ACBD2C3007216BB /* ViewController.m */,
+				767012321ACBD2C3007216BB /* Main.storyboard */,
+				767012351ACBD2C3007216BB /* Images.xcassets */,
+				767012371ACBD2C3007216BB /* LaunchScreen.xib */,
+				767012281ACBD2C3007216BB /* Supporting Files */,
+			);
+			path = TABSdkTestApp;
+			sourceTree = "<group>";
+		};
+		767012281ACBD2C3007216BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				767012291ACBD2C3007216BB /* Info.plist */,
+				7670122A1ACBD2C3007216BB /* main.m */,
+				767012851ACBD3F9007216BB /* TABSdkTestApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		767012411ACBD2C3007216BB /* TABSdkTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				767012441ACBD2C3007216BB /* TABSdkTestAppTests.m */,
+				767012421ACBD2C3007216BB /* Supporting Files */,
+			);
+			path = TABSdkTestAppTests;
+			sourceTree = "<group>";
+		};
+		767012421ACBD2C3007216BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				767012431ACBD2C3007216BB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7670124E1ACBD303007216BB /* TABSdk */ = {
+			isa = PBXGroup;
+			children = (
+				7670125D1ACBD3B1007216BB /* Constants.h */,
+				7670125E1ACBD3B1007216BB /* Errors.h */,
+				7670125F1ACBD3B1007216BB /* libTabSdk-ios Mock.a */,
+				767012601ACBD3B1007216BB /* TABActivitiesClient.h */,
+				767012611ACBD3B1007216BB /* TABActivity.h */,
+				767012621ACBD3B1007216BB /* TABActivityDetailResponse.h */,
+				767012631ACBD3B1007216BB /* TABActivityListResponse.h */,
+				767012641ACBD3B1007216BB /* TABAnswer.h */,
+				767012651ACBD3B1007216BB /* TABBarcode.h */,
+				767012661ACBD3B1007216BB /* TABBookingCancelResponse.h */,
+				767012671ACBD3B1007216BB /* TABBookingConfirmResponse.h */,
+				767012681ACBD3B1007216BB /* TABBookingDetail.h */,
+				767012691ACBD3B1007216BB /* TABBookingDetailResponse.h */,
+				7670126A1ACBD3B1007216BB /* TABBookingPreconfirmResponse.h */,
+				7670126B1ACBD3B1007216BB /* TABCancellationFee.h */,
+				7670126C1ACBD3B1007216BB /* TABComment.h */,
+				7670126D1ACBD3B1007216BB /* TABConfirmationCode.h */,
+				7670126E1ACBD3B1007216BB /* TABDescription.h */,
+				7670126F1ACBD3B1007216BB /* TABFee.h */,
+				767012701ACBD3B1007216BB /* TABHolder.h */,
+				767012711ACBD3B1007216BB /* TABImage.h */,
+				767012721ACBD3B1007216BB /* TABInvoiceCompany.h */,
+				767012731ACBD3B1007216BB /* TABModality.h */,
+				767012741ACBD3B1007216BB /* TABOperationDate.h */,
+				767012751ACBD3B1007216BB /* TABPagination.h */,
+				767012761ACBD3B1007216BB /* TABPax.h */,
+				767012771ACBD3B1007216BB /* TABPaymentInformation.h */,
+				767012781ACBD3B1007216BB /* TABPriceBreakdown.h */,
+				767012791ACBD3B1007216BB /* TABPriceSegment.h */,
+				7670127A1ACBD3B1007216BB /* TABQuestion.h */,
+				7670127B1ACBD3B1007216BB /* TABSdk.h */,
+				7670127C1ACBD3B1007216BB /* TABServerError.h */,
+				7670127D1ACBD3B1007216BB /* TABServerResponse.h */,
+				7670127E1ACBD3B1007216BB /* TABServiceDetail.h */,
+				7670127F1ACBD3B1007216BB /* TABServiceRequest.h */,
+				767012801ACBD3B1007216BB /* TABSupplement.h */,
+				767012811ACBD3B1007216BB /* TABSupplier.h */,
+				767012821ACBD3B1007216BB /* TABValuedActivity.h */,
+				767012831ACBD3B1007216BB /* TABVoucher.h */,
+			);
+			name = TABSdk;
+			sourceTree = "<group>";
+		};
+		7670124F1ACBD30D007216BB /* Mantle */ = {
+			isa = PBXGroup;
+			children = (
+				767012501ACBD376007216BB /* Mantle.h */,
+				767012511ACBD376007216BB /* MTLJSONAdapter.h */,
+				767012521ACBD376007216BB /* MTLManagedObjectAdapter.h */,
+				767012531ACBD376007216BB /* MTLModel.h */,
+				767012541ACBD376007216BB /* MTLModel+NSCoding.h */,
+				767012551ACBD376007216BB /* MTLReflection.h */,
+				767012561ACBD376007216BB /* MTLValueTransformer.h */,
+				767012571ACBD376007216BB /* NSArray+MTLManipulationAdditions.h */,
+				767012581ACBD376007216BB /* NSDictionary+MTLManipulationAdditions.h */,
+				767012591ACBD376007216BB /* NSError+MTLModelException.h */,
+				7670125A1ACBD376007216BB /* NSObject+MTLComparisonAdditions.h */,
+				7670125B1ACBD376007216BB /* NSValueTransformer+MTLInversionAdditions.h */,
+				7670125C1ACBD376007216BB /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */,
+			);
+			name = Mantle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		767012241ACBD2C3007216BB /* TABSdkTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 767012481ACBD2C3007216BB /* Build configuration list for PBXNativeTarget "TABSdkTestApp" */;
+			buildPhases = (
+				767012211ACBD2C3007216BB /* Sources */,
+				767012221ACBD2C3007216BB /* Frameworks */,
+				767012231ACBD2C3007216BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TABSdkTestApp;
+			productName = TABSdkTestApp;
+			productReference = 767012251ACBD2C3007216BB /* TABSdkTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7670123D1ACBD2C3007216BB /* TABSdkTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7670124B1ACBD2C3007216BB /* Build configuration list for PBXNativeTarget "TABSdkTestAppTests" */;
+			buildPhases = (
+				7670123A1ACBD2C3007216BB /* Sources */,
+				7670123B1ACBD2C3007216BB /* Frameworks */,
+				7670123C1ACBD2C3007216BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				767012401ACBD2C3007216BB /* PBXTargetDependency */,
+			);
+			name = TABSdkTestAppTests;
+			productName = TABSdkTestAppTests;
+			productReference = 7670123E1ACBD2C3007216BB /* TABSdkTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7670121D1ACBD2C3007216BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Diego Lafuente Garcia";
+				TargetAttributes = {
+					767012241ACBD2C3007216BB = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					7670123D1ACBD2C3007216BB = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 767012241ACBD2C3007216BB;
+					};
+				};
+			};
+			buildConfigurationList = 767012201ACBD2C3007216BB /* Build configuration list for PBXProject "TABSdkTestApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7670121C1ACBD2C3007216BB;
+			productRefGroup = 767012261ACBD2C3007216BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				767012241ACBD2C3007216BB /* TABSdkTestApp */,
+				7670123D1ACBD2C3007216BB /* TABSdkTestAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		767012231ACBD2C3007216BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767012341ACBD2C3007216BB /* Main.storyboard in Resources */,
+				767012391ACBD2C3007216BB /* LaunchScreen.xib in Resources */,
+				767012361ACBD2C3007216BB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7670123C1ACBD2C3007216BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		767012211ACBD2C3007216BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767012311ACBD2C3007216BB /* ViewController.m in Sources */,
+				7670122E1ACBD2C3007216BB /* AppDelegate.m in Sources */,
+				7670122B1ACBD2C3007216BB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7670123A1ACBD2C3007216BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767012451ACBD2C3007216BB /* TABSdkTestAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		767012401ACBD2C3007216BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 767012241ACBD2C3007216BB /* TABSdkTestApp */;
+			targetProxy = 7670123F1ACBD2C3007216BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		767012321ACBD2C3007216BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				767012331ACBD2C3007216BB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		767012371ACBD2C3007216BB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				767012381ACBD2C3007216BB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		767012461ACBD2C3007216BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					i386,
+					x86_64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
+			};
+			name = Debug;
+		};
+		767012471ACBD2C3007216BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					i386,
+					x86_64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
+			};
+			name = Release;
+		};
+		767012491ACBD2C3007216BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TABSdkTestApp/TABSdkTestApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/TABSdkTestApp/",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = TABSdkTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TABSdkTestApp/TABSdk",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7670124A1ACBD2C3007216BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TABSdkTestApp/TABSdkTestApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/TABSdkTestApp/",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = TABSdkTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TABSdkTestApp/TABSdk",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7670124C1ACBD2C3007216BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TABSdkTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TABSdkTestApp.app/TABSdkTestApp";
+			};
+			name = Debug;
+		};
+		7670124D1ACBD2C3007216BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TABSdkTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TABSdkTestApp.app/TABSdkTestApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		767012201ACBD2C3007216BB /* Build configuration list for PBXProject "TABSdkTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				767012461ACBD2C3007216BB /* Debug */,
+				767012471ACBD2C3007216BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		767012481ACBD2C3007216BB /* Build configuration list for PBXNativeTarget "TABSdkTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				767012491ACBD2C3007216BB /* Debug */,
+				7670124A1ACBD2C3007216BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7670124B1ACBD2C3007216BB /* Build configuration list for PBXNativeTarget "TABSdkTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7670124C1ACBD2C3007216BB /* Debug */,
+				7670124D1ACBD2C3007216BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7670121D1ACBD2C3007216BB /* Project object */;
+}

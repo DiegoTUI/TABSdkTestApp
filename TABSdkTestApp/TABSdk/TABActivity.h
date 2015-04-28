@@ -1,0 +1,66 @@
+//
+//  TABActivity.h
+//  TabSdk-ios
+//
+//  Created by Diego Lafuente on 19/02/15.
+//  Copyright (c) 2015 Transfers and Activities Bank. All rights reserved.
+//
+
+/**
+ Model of a basic TAB Activity. This model only includes the basic info of an activity. 
+ For an extended model of an activity, refer to TABValuedActivity
+ */
+@interface TABActivity : MTLModel<MTLJSONSerializing>
+
+/**
+ The code of the activity
+ */
+@property (strong, nonatomic, readonly) NSString *code;
+
+/**
+ The name of the activity
+ */
+@property (strong, nonatomic, readonly) NSString *name;
+
+/**
+ The short description of the activity
+ */
+@property (strong, nonatomic, readonly) NSString *shortDescription;
+
+/**
+ Price for an adult in the cheapest modality of the activity
+ */
+@property (strong, nonatomic, readonly) NSNumber *adultPrice;
+
+/**
+ Price for an adult in the cheapest modality of the activity at the box office
+ */
+@property (strong, nonatomic, readonly) NSNumber *adultBoxOfficePrice;
+
+/**
+ Price for a child in the cheapest modality of the activity
+ */
+@property (strong, nonatomic, readonly) NSNumber *childPrice;
+
+/**
+ Price for a child in the cheapest modality of the activity at the box office
+ */
+@property (strong, nonatomic, readonly) NSNumber *childBoxOfficePrice;
+
+/**
+ The main picture of the activity in all the available sizes. This is an array of TABImage objects
+ */
+@property (strong, nonatomic, readonly) NSArray *images;
+
+/**
+ An identifier to retrieve the full content of te activity if needed.
+ */
+@property (strong, nonatomic, readonly) NSNumber *contentId;
+
+/**
+ An indicator of the relevance of the activity according to TAB's system (the higher, the less relevant).
+ */
+@property (strong, nonatomic, readonly) NSNumber *order;
+
+
+@end
