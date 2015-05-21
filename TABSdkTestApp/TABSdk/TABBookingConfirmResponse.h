@@ -19,4 +19,9 @@
  */
 @property (strong, nonatomic, readonly) TABBookingDetail *booking;
 
+/**
+ The url of the web payment gateway. ONLY VALID FOR OPTION 1. WILL BE REMOVED IN OPTION 2.
+ */
+@property (strong, nonatomic, readonly) NSURL *paymentUrl;
+
 @end

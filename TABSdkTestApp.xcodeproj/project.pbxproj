@@ -54,8 +54,6 @@
 		7670125A1ACBD376007216BB /* NSObject+MTLComparisonAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+MTLComparisonAdditions.h"; path = "Mantle/NSObject+MTLComparisonAdditions.h"; sourceTree = "<group>"; };
 		7670125B1ACBD376007216BB /* NSValueTransformer+MTLInversionAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLInversionAdditions.h"; path = "Mantle/NSValueTransformer+MTLInversionAdditions.h"; sourceTree = "<group>"; };
 		7670125C1ACBD376007216BB /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLPredefinedTransformerAdditions.h"; path = "Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.h"; sourceTree = "<group>"; };
-		7670125D1ACBD3B1007216BB /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = TABSdk/Constants.h; sourceTree = "<group>"; };
-		7670125E1ACBD3B1007216BB /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Errors.h; path = TABSdk/Errors.h; sourceTree = "<group>"; };
 		7670125F1ACBD3B1007216BB /* libTabSdk-ios Mock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTabSdk-ios Mock.a"; path = "TABSdk/libTabSdk-ios Mock.a"; sourceTree = "<group>"; };
 		767012601ACBD3B1007216BB /* TABActivitiesClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivitiesClient.h; path = TABSdk/TABActivitiesClient.h; sourceTree = "<group>"; };
 		767012611ACBD3B1007216BB /* TABActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivity.h; path = TABSdk/TABActivity.h; sourceTree = "<group>"; };
@@ -94,6 +92,8 @@
 		767012821ACBD3B1007216BB /* TABValuedActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABValuedActivity.h; path = TABSdk/TABValuedActivity.h; sourceTree = "<group>"; };
 		767012831ACBD3B1007216BB /* TABVoucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABVoucher.h; path = TABSdk/TABVoucher.h; sourceTree = "<group>"; };
 		767012851ACBD3F9007216BB /* TABSdkTestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TABSdkTestApp-Prefix.pch"; sourceTree = "<group>"; };
+		7679384A1AEFDAB8001DBC35 /* TABConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TABConstants.h; path = TABSdk/TABConstants.h; sourceTree = "<group>"; };
+		7679384B1AEFDAB8001DBC35 /* TABErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TABErrors.h; path = TABSdk/TABErrors.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,8 +180,8 @@
 		7670124E1ACBD303007216BB /* TABSdk */ = {
 			isa = PBXGroup;
 			children = (
-				7670125D1ACBD3B1007216BB /* Constants.h */,
-				7670125E1ACBD3B1007216BB /* Errors.h */,
+				7679384A1AEFDAB8001DBC35 /* TABConstants.h */,
+				7679384B1AEFDAB8001DBC35 /* TABErrors.h */,
 				7670125F1ACBD3B1007216BB /* libTabSdk-ios Mock.a */,
 				767012601ACBD3B1007216BB /* TABActivitiesClient.h */,
 				767012611ACBD3B1007216BB /* TABActivity.h */,
@@ -572,6 +572,7 @@
 				7670124A1ACBD2C3007216BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7670124B1ACBD2C3007216BB /* Build configuration list for PBXNativeTarget "TABSdkTestAppTests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +581,7 @@
 				7670124D1ACBD2C3007216BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

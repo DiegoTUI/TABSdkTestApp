@@ -24,8 +24,8 @@
 @property (strong, nonatomic, readonly) NSDate *to;
 
 /**
- The amount of the fee
+ The price of the cancellation fee
  */
-@property (strong, nonatomic, readonly) NSNumber *amount;
+@property (strong, nonatomic, readonly) NSNumber *price;
 
 @end

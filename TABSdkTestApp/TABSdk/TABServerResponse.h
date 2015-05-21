@@ -26,4 +26,14 @@
  */
 @property (strong, nonatomic, readonly) NSArray *errors;
 
+/**
+ @methodName initWithErrors:
+ @abstract Initializes a server response with a list of errors.
+ @discussion This method initializes a server response with a list of errors leaving the rest of attributes nil.
+ 
+ @param errors [required] The list of errors
+ @return An instance of the initialized server response.
+ */
+- (id)initWithErrors:(NSArray *)errors;
+
 @end

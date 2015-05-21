@@ -110,6 +110,9 @@
  */
 @property (strong, nonatomic, readonly) NSArray *barcodes;
 
-
+/**
+ The assigned seats in this service. This is a list of TABSeat objects.
+ */
+@property (strong, nonatomic, readonly) NSArray *seats;
 
 @end

@@ -59,8 +59,8 @@
 @property (strong, nonatomic, readonly) NSArray *operationDates;
 
 /**
- Cancellation fees for this modality. This is an array of TABCancellationFee objects.
+ The list of Foursquare ids (as described in https://developer.foursquare.com) related to this modality.
  */
-@property (strong, nonatomic, readonly) NSArray *cancellationFees;
+@property (strong, nonatomic, readonly) NSArray *foursquareIds;
 
 @end

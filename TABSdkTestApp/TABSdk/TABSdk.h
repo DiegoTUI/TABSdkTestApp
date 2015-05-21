@@ -14,7 +14,6 @@
 // responses
 #import "TABActivityListResponse.h"
 #import "TABActivityDetailResponse.h"
-#import "TABBookingPreconfirmResponse.h"
 #import "TABBookingConfirmResponse.h"
 #import "TABBookingDetailResponse.h"
 #import "TABBookingCancelResponse.h"
@@ -46,5 +45,7 @@
 #import "TABBarcode.h"
 #import "TABServerError.h"
 #import "TABPagination.h"
+#import "TABSeat.h"
+#import "TABCardInformation.h"
 
 #endif

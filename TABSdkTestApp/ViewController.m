@@ -8,7 +8,7 @@
 
 #import <Mantle/Mantle.h>
 #import "ViewController.h"
-#import "Constants.h"
+#import "TABConstants.h"
 #import "TABSdk.h"
 
 @interface ViewController ()
@@ -31,8 +31,8 @@
     // fetch activities for destination London. The rest of the parameters are optional
     __block TABActivity *activity;
     NSLog(@"before fetchActivitiesForDestination");
-    [client fetchActivitiesForDestination:@"LON" fromDate:nil toDate:nil pagination:nil completion:^(NSError *error, TABActivityListResponse *response) {
-        if (error) {
+    [client fetchActivitiesForDestination:@"LON" fromDate:nil toDate:nil pagination:nil completion:^(TABActivityListResponse *response) {
+        if (response.errors.count) {
             // do something about it
             return;
         }
@@ -47,8 +47,8 @@
     
     // get details for selected activity
     __block TABOperationDate *operationDate;
-    [client fetchDetailsForActivityCode:activity.code inDestination:@"LON" fromDate:nil toDate:nil paxes:@[pax] completion:^(NSError *error, TABActivityDetailResponse *response) {
-        if (error) {
+    [client fetchDetailsForActivityCode:activity.code inDestination:@"LON" fromDate:nil toDate:nil paxes:@[pax] completion:^(TABActivityDetailResponse *response) {
+        if (response.errors.count) {
             // do something about it
             return;
         }
@@ -63,37 +63,24 @@
     // create service request
     TABServiceRequest *serviceRequest = [[TABServiceRequest alloc] initWithPurchaseableServiceId:operationDate.purchaseableServiceId paxes:nil andAnswers:nil];
     
+    // create cardInformation
+    TABCardInformation *cardInformation = [[TABCardInformation alloc] initWithCardHolder:@"John Doe" cardNumber:@"1234432156788765" cardType:TABCreditCardTypeVisa cvc:@"323" expirationMonth:@3 expirationYear:@2020];
+    
     // preconfirm the booking
-    __block NSString *bookingConfirmId;
     __block TABBookingDetail *bookingDetail;
-    [client preconfirmBookingForServices:@[serviceRequest] holder:holder customerReference:nil completion:^(NSError *error, TABBookingPreconfirmResponse *response) {
-        if (error) {
-            // do something about it
-            return;
-        }
-        NSLog(@"Operation id for booking preconfirm: %@", response.operationId);
-        
-        bookingConfirmId = response.bookingConfirmId;
-        bookingDetail = response.booking;
-    }];
-    
-    // PERFORM PAYMENT!!!
-    
-    // confirm booking
-    [client confirmBooking:bookingConfirmId completion:^(NSError *error, TABBookingConfirmResponse *response) {
-        if (error) {
+    [client confirmBookingForServices:@[serviceRequest] holder:holder customerReference:nil cardInformation:cardInformation completion:^(TABBookingConfirmResponse *response) {
+        if (response.errors.count) {
             // do something about it
             return;
         }
         NSLog(@"Operation id for booking confirm: %@", response.operationId);
-        // Show voucher...
-        // update booking detail
         bookingDetail = response.booking;
     }];
     
+    
     // cancel booking
-    [client cancelBookingForReference:bookingDetail.reference completion:^(NSError *error, TABBookingCancelResponse *response) {
-        if (error) {
+    [client cancelBookingForReference:bookingDetail.reference completion:^(TABBookingCancelResponse *response) {
+        if (response.errors.count) {
             // do something about it
             return;
         }

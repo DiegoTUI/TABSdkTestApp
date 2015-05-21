@@ -53,4 +53,9 @@
  */
 @property (strong, nonatomic, readonly) NSArray *questions;
 
+/**
+ Cancellation fees for this operationDate. This is an array of TABCancellationFee objects.
+ */
+@property (strong, nonatomic, readonly) NSArray *cancellationFees;
+
 @end

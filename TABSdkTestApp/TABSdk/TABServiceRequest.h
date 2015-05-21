@@ -36,7 +36,7 @@
  @discussion This method initializes a service request with the needed info. It returns nil if the parameters are invalid.
  
  @param purchaseableServiceId [required] A valid purchaseableServiceId extracted from a TABOperationDate in the selected TABModality.
- @param paxes [options] An array of TABPax objects specifying the paxes to be booked. Only needed if the TABValuedActivity object returned by the activity detail operation returned questions in the selected operation date.
+ @param paxes [optional] An array of TABPax objects specifying the paxes to be booked. Only needed if the TABValuedActivity object returned by the activity detail operation returned questions in the selected operation date.
  @param answers [optional] An array of TABAnswer objects. Could be empty or nil.
  @return An instance of the initialized service request or nil if invalid parameters are provided.
  */

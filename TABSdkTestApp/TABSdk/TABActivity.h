@@ -53,6 +53,11 @@
 @property (strong, nonatomic, readonly) NSArray *images;
 
 /**
+ The list of Foursquare ids (as described in https://developer.foursquare.com) related to this activity.
+ */
+@property (strong, nonatomic, readonly) NSArray *foursquareIds;
+
+/**
  An identifier to retrieve the full content of te activity if needed.
  */
 @property (strong, nonatomic, readonly) NSNumber *contentId;
