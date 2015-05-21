@@ -15,7 +15,7 @@
  Image sizes.
  */
 typedef NS_ENUM(NSInteger, TABImageSize) {
-    /// Unknown size
+    /// Unknown image size
     TABImageSizeUnknown = 0,
     /// Extra large
     TABImageSizeExtraLarge,
@@ -31,8 +31,10 @@ typedef NS_ENUM(NSInteger, TABImageSize) {
  Description types.
  */
 typedef NS_ENUM(NSInteger, TABDescriptionType) {
+    /// Unknown description type
+    TABDescriptionTypeUnknown = 0,
     /// General description
-    TABDescriptionTypeGeneral = 0,
+    TABDescriptionTypeGeneral,
     /// Tooltip description
     TABDescriptionTypeTooltip,
     /// Short description
@@ -45,8 +47,10 @@ typedef NS_ENUM(NSInteger, TABDescriptionType) {
  Modality unit types.
  */
 typedef NS_ENUM(NSInteger, TABModalityUnitType) {
+    /// Unknown modality unit type
+    TABModalityUnitTypeUnknown = 0,
     /// Pax type
-    TABModalityUnitTypePax = 0,
+    TABModalityUnitTypePax,
     /// Service type
     TABModalityUnitTypeService
 };
@@ -55,24 +59,30 @@ typedef NS_ENUM(NSInteger, TABModalityUnitType) {
  Modality types.
  */
 typedef NS_ENUM(NSInteger, TABModalityType) {
+    /// Unknown modality type
+    TABModalityTypeUnknown = 0,
     /// Ticket type
-    TABModalityTypeTicket = 0
+    TABModalityTypeTicket
 };
 
 /**
  Comment types.
  */
 typedef NS_ENUM(NSInteger, TABCommentType) {
+    /// Unknown comment type
+    TABCommentTypeUnknown = 0,
     /// Contract remarks
-    TABCommentTypeContractRemarks = 0
+    TABCommentTypeContractRemarks
 };
 
 /**
  Status of a booking.
  */
 typedef NS_ENUM(NSInteger, TABBookingStatus) {
+    /// Unknown booking status
+    TABBookingStatusUnknown = 0,
     /// On hold. Confirmation pending.
-    TABBookingStatusHold = 0,
+    TABBookingStatusHold,
     /// Confirmed.
     TABBookingStatusConfirmed,
     /// Cancelled
@@ -91,8 +101,18 @@ typedef NS_ENUM(NSInteger, TABCreditCardType) {
     TABCreditCardTypeAmex
 };
 
+/**
+ Pax question code.
+ */
+typedef NS_ENUM(NSInteger, TABPaxQuestionCode) {
+    /// Unknown pax question code
+    TABPaxQuestionCodeUnknown = 0,
+    /// Code for a px question about weight
+    TABPaxQuestionCodeWeight
+};
+
 // default language for the client
-#define DEFAULT_CLIENT_LANGUAGE @"ENG"
+#define DEFAULT_CLIENT_LANGUAGE @"en"
 // default (INVALID) destination
 #define INVALID_DESTINATION @"TAB_INVALID_DESTINATION"
 // default number of days for the avail query
@@ -103,14 +123,16 @@ typedef NS_ENUM(NSInteger, TABCreditCardType) {
 
 // base url
 #if (DEBUG || TESTING)
-#define API_URL @"http://54.154.213.111/api/testapikey/"
+#define API_URL @"http://sa3dmt01.hotelbeds:23002/actdis-api/public/v1/"
+#define OSC_URL @"http://wl3mpt01.hotelbeds:7009/actapi/"
 #else
-#define API_URL @"http://www.guidego.com/api/testapikey/"
+#define API_URL @"https://activitiesapi.activitiesbank.com/v1/"
+#define OSC_URL @"https://osc.activitiesbank.com/v1/"
 #endif
 
-// Test user and password
-#define TEST_SDK_USER @"GUIDEGOEUR139789"
-#define TEST_SDK_PASSWORD @"GUIDEGOEUR139789"
-#define TEST_SDK_DESTINATION @"BCN"
+// Test API key and secret
+#define TEST_SDK_API_KEY @"VISITLONDON1234"
+#define TEST_SDK_API_SECRET @"VISITLONDON1234"
+#define TEST_SDK_DESTINATION @"LON"
 
 #endif

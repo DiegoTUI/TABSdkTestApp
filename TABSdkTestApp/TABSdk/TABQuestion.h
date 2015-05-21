@@ -9,17 +9,12 @@
 #import <UIKit/UIKit.h>
 
 /**
- Model of a question for an activity. Questions are returned at the activity and operation dates level and answers to those questions are required in the requests of some services.
+ Model of a generic question for an activity. Questions are returned at the activity level (see TABContractQuestion) and at the operation date level (see TABPaxQuestion). Answers to those questions are required in the requests of some services. Answers to both kinds of questions are given using the TABAnswer model.
  */
 @interface TABQuestion : MTLModel<MTLJSONSerializing>
 
 /**
- The code of the contract question
- */
-@property (strong, nonatomic, readonly) NSString *code;
-
-/**
- The text of the contract question
+ The text of the question
  */
 @property (strong, nonatomic, readonly) NSString *text;
 

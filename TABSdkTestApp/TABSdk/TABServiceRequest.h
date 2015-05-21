@@ -20,12 +20,12 @@
 @property (strong, nonatomic, readonly) NSString *purchaseableServiceId;
 
 /**
- The paxes to be booked.
+ The paxes to be booked. This is an array of TABPax objects. Only needed if the TABValuedActivity object returned by the activity detail operation returned pax questions in the selected operation date.
  */
-@property (strong, nonatomic, readonly) NSArray *paxes;
+@property (strong, nonatomic, readonly) NSArray *paxesInformation;
 
 /**
- The answers to the contract questions for this booking.
+ The answers to the contract questions for this booking. This is an array of TABAnswer objects.
  */
 @property (strong, nonatomic, readonly) NSArray *answers;
 
@@ -36,12 +36,12 @@
  @discussion This method initializes a service request with the needed info. It returns nil if the parameters are invalid.
  
  @param purchaseableServiceId [required] A valid purchaseableServiceId extracted from a TABOperationDate in the selected TABModality.
- @param paxes [optional] An array of TABPax objects specifying the paxes to be booked. Only needed if the TABValuedActivity object returned by the activity detail operation returned questions in the selected operation date.
+ @param paxesInformation [optional] An array of TABPax objects specifying the paxes to be booked. Only needed if the TABValuedActivity object returned by the activity detail operation returned pax questions in the selected operation date.
  @param answers [optional] An array of TABAnswer objects. Could be empty or nil.
  @return An instance of the initialized service request or nil if invalid parameters are provided.
  */
 - (id)initWithPurchaseableServiceId:(NSString *)purchaseableServiceId
-                               paxes:(NSArray *)paxes
-                          andAnswers:(NSArray *)answers;
+                   paxesInformation:(NSArray *)paxesInformation
+                         andAnswers:(NSArray *)answers;
 
 @end

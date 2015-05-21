@@ -63,6 +63,11 @@
 @property (strong, nonatomic, readonly) NSNumber *contentId;
 
 /**
+ A list of keywords defining the activity. This is a NSArray of NSString objects.
+ */
+@property (strong, nonatomic, readonly) NSArray *keywords;
+
+/**
  An indicator of the relevance of the activity according to TAB's system (the higher, the less relevant).
  */
 @property (strong, nonatomic, readonly) NSNumber *order;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76169B021B0DD52F00DD418C /* libTabSdk-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76169AD41B0DD52F00DD418C /* libTabSdk-ios.a */; };
 		7670122B1ACBD2C3007216BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7670122A1ACBD2C3007216BB /* main.m */; };
 		7670122E1ACBD2C3007216BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7670122D1ACBD2C3007216BB /* AppDelegate.m */; };
 		767012311ACBD2C3007216BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767012301ACBD2C3007216BB /* ViewController.m */; };
@@ -14,7 +15,6 @@
 		767012361ACBD2C3007216BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767012351ACBD2C3007216BB /* Images.xcassets */; };
 		767012391ACBD2C3007216BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 767012371ACBD2C3007216BB /* LaunchScreen.xib */; };
 		767012451ACBD2C3007216BB /* TABSdkTestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 767012441ACBD2C3007216BB /* TABSdkTestAppTests.m */; };
-		767012841ACBD3B1007216BB /* libTabSdk-ios Mock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7670125F1ACBD3B1007216BB /* libTabSdk-ios Mock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +28,52 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76169AD41B0DD52F00DD418C /* libTabSdk-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTabSdk-ios.a"; path = "TABSdk/libTabSdk-ios.a"; sourceTree = "<group>"; };
+		76169AD51B0DD52F00DD418C /* TABActivitiesClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivitiesClient.h; path = TABSdk/TABActivitiesClient.h; sourceTree = "<group>"; };
+		76169AD61B0DD52F00DD418C /* TABActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivity.h; path = TABSdk/TABActivity.h; sourceTree = "<group>"; };
+		76169AD71B0DD52F00DD418C /* TABActivityDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivityDetailResponse.h; path = TABSdk/TABActivityDetailResponse.h; sourceTree = "<group>"; };
+		76169AD81B0DD52F00DD418C /* TABActivityListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivityListResponse.h; path = TABSdk/TABActivityListResponse.h; sourceTree = "<group>"; };
+		76169AD91B0DD52F00DD418C /* TABAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABAnswer.h; path = TABSdk/TABAnswer.h; sourceTree = "<group>"; };
+		76169ADA1B0DD52F00DD418C /* TABBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBarcode.h; path = TABSdk/TABBarcode.h; sourceTree = "<group>"; };
+		76169ADB1B0DD52F00DD418C /* TABBookingCancelResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingCancelResponse.h; path = TABSdk/TABBookingCancelResponse.h; sourceTree = "<group>"; };
+		76169ADC1B0DD52F00DD418C /* TABBookingConfirmResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingConfirmResponse.h; path = TABSdk/TABBookingConfirmResponse.h; sourceTree = "<group>"; };
+		76169ADD1B0DD52F00DD418C /* TABBookingDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingDetail.h; path = TABSdk/TABBookingDetail.h; sourceTree = "<group>"; };
+		76169ADE1B0DD52F00DD418C /* TABBookingDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingDetailResponse.h; path = TABSdk/TABBookingDetailResponse.h; sourceTree = "<group>"; };
+		76169ADF1B0DD52F00DD418C /* TABCancellationFee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABCancellationFee.h; path = TABSdk/TABCancellationFee.h; sourceTree = "<group>"; };
+		76169AE01B0DD52F00DD418C /* TABCardInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABCardInformation.h; path = TABSdk/TABCardInformation.h; sourceTree = "<group>"; };
+		76169AE11B0DD52F00DD418C /* TABComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABComment.h; path = TABSdk/TABComment.h; sourceTree = "<group>"; };
+		76169AE21B0DD52F00DD418C /* TABConfirmationCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABConfirmationCode.h; path = TABSdk/TABConfirmationCode.h; sourceTree = "<group>"; };
+		76169AE31B0DD52F00DD418C /* TABConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABConstants.h; path = TABSdk/TABConstants.h; sourceTree = "<group>"; };
+		76169AE41B0DD52F00DD418C /* TABContractAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABContractAnswer.h; path = TABSdk/TABContractAnswer.h; sourceTree = "<group>"; };
+		76169AE51B0DD52F00DD418C /* TABContractQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABContractQuestion.h; path = TABSdk/TABContractQuestion.h; sourceTree = "<group>"; };
+		76169AE61B0DD52F00DD418C /* TABDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABDescription.h; path = TABSdk/TABDescription.h; sourceTree = "<group>"; };
+		76169AE71B0DD52F00DD418C /* TABErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABErrors.h; path = TABSdk/TABErrors.h; sourceTree = "<group>"; };
+		76169AE81B0DD52F00DD418C /* TABFee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABFee.h; path = TABSdk/TABFee.h; sourceTree = "<group>"; };
+		76169AE91B0DD52F00DD418C /* TABHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABHolder.h; path = TABSdk/TABHolder.h; sourceTree = "<group>"; };
+		76169AEA1B0DD52F00DD418C /* TABImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABImage.h; path = TABSdk/TABImage.h; sourceTree = "<group>"; };
+		76169AEB1B0DD52F00DD418C /* TABInvoiceCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABInvoiceCompany.h; path = TABSdk/TABInvoiceCompany.h; sourceTree = "<group>"; };
+		76169AEC1B0DD52F00DD418C /* TABModality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABModality.h; path = TABSdk/TABModality.h; sourceTree = "<group>"; };
+		76169AED1B0DD52F00DD418C /* TABNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABNetworkClient.h; path = TABSdk/TABNetworkClient.h; sourceTree = "<group>"; };
+		76169AEE1B0DD52F00DD418C /* TABOperationDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABOperationDate.h; path = TABSdk/TABOperationDate.h; sourceTree = "<group>"; };
+		76169AEF1B0DD52F00DD418C /* TABPagination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPagination.h; path = TABSdk/TABPagination.h; sourceTree = "<group>"; };
+		76169AF01B0DD52F00DD418C /* TABPax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPax.h; path = TABSdk/TABPax.h; sourceTree = "<group>"; };
+		76169AF11B0DD52F00DD418C /* TABPaxAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPaxAnswer.h; path = TABSdk/TABPaxAnswer.h; sourceTree = "<group>"; };
+		76169AF21B0DD52F00DD418C /* TABPaxQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPaxQuestion.h; path = TABSdk/TABPaxQuestion.h; sourceTree = "<group>"; };
+		76169AF31B0DD52F00DD418C /* TABPaymentInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPaymentInformation.h; path = TABSdk/TABPaymentInformation.h; sourceTree = "<group>"; };
+		76169AF41B0DD52F00DD418C /* TABPriceBreakdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPriceBreakdown.h; path = TABSdk/TABPriceBreakdown.h; sourceTree = "<group>"; };
+		76169AF51B0DD52F00DD418C /* TABPriceSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPriceSegment.h; path = TABSdk/TABPriceSegment.h; sourceTree = "<group>"; };
+		76169AF61B0DD52F00DD418C /* TABQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABQuestion.h; path = TABSdk/TABQuestion.h; sourceTree = "<group>"; };
+		76169AF71B0DD52F00DD418C /* TABSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABSdk.h; path = TABSdk/TABSdk.h; sourceTree = "<group>"; };
+		76169AF81B0DD52F00DD418C /* TABSeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABSeat.h; path = TABSdk/TABSeat.h; sourceTree = "<group>"; };
+		76169AF91B0DD52F00DD418C /* TABServerError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServerError.h; path = TABSdk/TABServerError.h; sourceTree = "<group>"; };
+		76169AFA1B0DD52F00DD418C /* TABServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServerResponse.h; path = TABSdk/TABServerResponse.h; sourceTree = "<group>"; };
+		76169AFB1B0DD52F00DD418C /* TABServiceDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServiceDetail.h; path = TABSdk/TABServiceDetail.h; sourceTree = "<group>"; };
+		76169AFC1B0DD52F00DD418C /* TABServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServiceRequest.h; path = TABSdk/TABServiceRequest.h; sourceTree = "<group>"; };
+		76169AFD1B0DD52F00DD418C /* TABSupplement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABSupplement.h; path = TABSdk/TABSupplement.h; sourceTree = "<group>"; };
+		76169AFE1B0DD52F00DD418C /* TABSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABSupplier.h; path = TABSdk/TABSupplier.h; sourceTree = "<group>"; };
+		76169AFF1B0DD52F00DD418C /* TABToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABToken.h; path = TABSdk/TABToken.h; sourceTree = "<group>"; };
+		76169B001B0DD52F00DD418C /* TABValuedActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABValuedActivity.h; path = TABSdk/TABValuedActivity.h; sourceTree = "<group>"; };
+		76169B011B0DD52F00DD418C /* TABVoucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABVoucher.h; path = TABSdk/TABVoucher.h; sourceTree = "<group>"; };
 		767012251ACBD2C3007216BB /* TABSdkTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TABSdkTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		767012291ACBD2C3007216BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7670122A1ACBD2C3007216BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,46 +100,7 @@
 		7670125A1ACBD376007216BB /* NSObject+MTLComparisonAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+MTLComparisonAdditions.h"; path = "Mantle/NSObject+MTLComparisonAdditions.h"; sourceTree = "<group>"; };
 		7670125B1ACBD376007216BB /* NSValueTransformer+MTLInversionAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLInversionAdditions.h"; path = "Mantle/NSValueTransformer+MTLInversionAdditions.h"; sourceTree = "<group>"; };
 		7670125C1ACBD376007216BB /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLPredefinedTransformerAdditions.h"; path = "Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.h"; sourceTree = "<group>"; };
-		7670125F1ACBD3B1007216BB /* libTabSdk-ios Mock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTabSdk-ios Mock.a"; path = "TABSdk/libTabSdk-ios Mock.a"; sourceTree = "<group>"; };
-		767012601ACBD3B1007216BB /* TABActivitiesClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivitiesClient.h; path = TABSdk/TABActivitiesClient.h; sourceTree = "<group>"; };
-		767012611ACBD3B1007216BB /* TABActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivity.h; path = TABSdk/TABActivity.h; sourceTree = "<group>"; };
-		767012621ACBD3B1007216BB /* TABActivityDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivityDetailResponse.h; path = TABSdk/TABActivityDetailResponse.h; sourceTree = "<group>"; };
-		767012631ACBD3B1007216BB /* TABActivityListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABActivityListResponse.h; path = TABSdk/TABActivityListResponse.h; sourceTree = "<group>"; };
-		767012641ACBD3B1007216BB /* TABAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABAnswer.h; path = TABSdk/TABAnswer.h; sourceTree = "<group>"; };
-		767012651ACBD3B1007216BB /* TABBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBarcode.h; path = TABSdk/TABBarcode.h; sourceTree = "<group>"; };
-		767012661ACBD3B1007216BB /* TABBookingCancelResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingCancelResponse.h; path = TABSdk/TABBookingCancelResponse.h; sourceTree = "<group>"; };
-		767012671ACBD3B1007216BB /* TABBookingConfirmResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingConfirmResponse.h; path = TABSdk/TABBookingConfirmResponse.h; sourceTree = "<group>"; };
-		767012681ACBD3B1007216BB /* TABBookingDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingDetail.h; path = TABSdk/TABBookingDetail.h; sourceTree = "<group>"; };
-		767012691ACBD3B1007216BB /* TABBookingDetailResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingDetailResponse.h; path = TABSdk/TABBookingDetailResponse.h; sourceTree = "<group>"; };
-		7670126A1ACBD3B1007216BB /* TABBookingPreconfirmResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABBookingPreconfirmResponse.h; path = TABSdk/TABBookingPreconfirmResponse.h; sourceTree = "<group>"; };
-		7670126B1ACBD3B1007216BB /* TABCancellationFee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABCancellationFee.h; path = TABSdk/TABCancellationFee.h; sourceTree = "<group>"; };
-		7670126C1ACBD3B1007216BB /* TABComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABComment.h; path = TABSdk/TABComment.h; sourceTree = "<group>"; };
-		7670126D1ACBD3B1007216BB /* TABConfirmationCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABConfirmationCode.h; path = TABSdk/TABConfirmationCode.h; sourceTree = "<group>"; };
-		7670126E1ACBD3B1007216BB /* TABDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABDescription.h; path = TABSdk/TABDescription.h; sourceTree = "<group>"; };
-		7670126F1ACBD3B1007216BB /* TABFee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABFee.h; path = TABSdk/TABFee.h; sourceTree = "<group>"; };
-		767012701ACBD3B1007216BB /* TABHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABHolder.h; path = TABSdk/TABHolder.h; sourceTree = "<group>"; };
-		767012711ACBD3B1007216BB /* TABImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABImage.h; path = TABSdk/TABImage.h; sourceTree = "<group>"; };
-		767012721ACBD3B1007216BB /* TABInvoiceCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABInvoiceCompany.h; path = TABSdk/TABInvoiceCompany.h; sourceTree = "<group>"; };
-		767012731ACBD3B1007216BB /* TABModality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABModality.h; path = TABSdk/TABModality.h; sourceTree = "<group>"; };
-		767012741ACBD3B1007216BB /* TABOperationDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABOperationDate.h; path = TABSdk/TABOperationDate.h; sourceTree = "<group>"; };
-		767012751ACBD3B1007216BB /* TABPagination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPagination.h; path = TABSdk/TABPagination.h; sourceTree = "<group>"; };
-		767012761ACBD3B1007216BB /* TABPax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPax.h; path = TABSdk/TABPax.h; sourceTree = "<group>"; };
-		767012771ACBD3B1007216BB /* TABPaymentInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPaymentInformation.h; path = TABSdk/TABPaymentInformation.h; sourceTree = "<group>"; };
-		767012781ACBD3B1007216BB /* TABPriceBreakdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPriceBreakdown.h; path = TABSdk/TABPriceBreakdown.h; sourceTree = "<group>"; };
-		767012791ACBD3B1007216BB /* TABPriceSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABPriceSegment.h; path = TABSdk/TABPriceSegment.h; sourceTree = "<group>"; };
-		7670127A1ACBD3B1007216BB /* TABQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABQuestion.h; path = TABSdk/TABQuestion.h; sourceTree = "<group>"; };
-		7670127B1ACBD3B1007216BB /* TABSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABSdk.h; path = TABSdk/TABSdk.h; sourceTree = "<group>"; };
-		7670127C1ACBD3B1007216BB /* TABServerError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServerError.h; path = TABSdk/TABServerError.h; sourceTree = "<group>"; };
-		7670127D1ACBD3B1007216BB /* TABServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServerResponse.h; path = TABSdk/TABServerResponse.h; sourceTree = "<group>"; };
-		7670127E1ACBD3B1007216BB /* TABServiceDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServiceDetail.h; path = TABSdk/TABServiceDetail.h; sourceTree = "<group>"; };
-		7670127F1ACBD3B1007216BB /* TABServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABServiceRequest.h; path = TABSdk/TABServiceRequest.h; sourceTree = "<group>"; };
-		767012801ACBD3B1007216BB /* TABSupplement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABSupplement.h; path = TABSdk/TABSupplement.h; sourceTree = "<group>"; };
-		767012811ACBD3B1007216BB /* TABSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABSupplier.h; path = TABSdk/TABSupplier.h; sourceTree = "<group>"; };
-		767012821ACBD3B1007216BB /* TABValuedActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABValuedActivity.h; path = TABSdk/TABValuedActivity.h; sourceTree = "<group>"; };
-		767012831ACBD3B1007216BB /* TABVoucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABVoucher.h; path = TABSdk/TABVoucher.h; sourceTree = "<group>"; };
 		767012851ACBD3F9007216BB /* TABSdkTestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TABSdkTestApp-Prefix.pch"; sourceTree = "<group>"; };
-		7679384A1AEFDAB8001DBC35 /* TABConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TABConstants.h; path = TABSdk/TABConstants.h; sourceTree = "<group>"; };
-		7679384B1AEFDAB8001DBC35 /* TABErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TABErrors.h; path = TABSdk/TABErrors.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				767012841ACBD3B1007216BB /* libTabSdk-ios Mock.a in Frameworks */,
+				76169B021B0DD52F00DD418C /* libTabSdk-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,45 +187,52 @@
 		7670124E1ACBD303007216BB /* TABSdk */ = {
 			isa = PBXGroup;
 			children = (
-				7679384A1AEFDAB8001DBC35 /* TABConstants.h */,
-				7679384B1AEFDAB8001DBC35 /* TABErrors.h */,
-				7670125F1ACBD3B1007216BB /* libTabSdk-ios Mock.a */,
-				767012601ACBD3B1007216BB /* TABActivitiesClient.h */,
-				767012611ACBD3B1007216BB /* TABActivity.h */,
-				767012621ACBD3B1007216BB /* TABActivityDetailResponse.h */,
-				767012631ACBD3B1007216BB /* TABActivityListResponse.h */,
-				767012641ACBD3B1007216BB /* TABAnswer.h */,
-				767012651ACBD3B1007216BB /* TABBarcode.h */,
-				767012661ACBD3B1007216BB /* TABBookingCancelResponse.h */,
-				767012671ACBD3B1007216BB /* TABBookingConfirmResponse.h */,
-				767012681ACBD3B1007216BB /* TABBookingDetail.h */,
-				767012691ACBD3B1007216BB /* TABBookingDetailResponse.h */,
-				7670126A1ACBD3B1007216BB /* TABBookingPreconfirmResponse.h */,
-				7670126B1ACBD3B1007216BB /* TABCancellationFee.h */,
-				7670126C1ACBD3B1007216BB /* TABComment.h */,
-				7670126D1ACBD3B1007216BB /* TABConfirmationCode.h */,
-				7670126E1ACBD3B1007216BB /* TABDescription.h */,
-				7670126F1ACBD3B1007216BB /* TABFee.h */,
-				767012701ACBD3B1007216BB /* TABHolder.h */,
-				767012711ACBD3B1007216BB /* TABImage.h */,
-				767012721ACBD3B1007216BB /* TABInvoiceCompany.h */,
-				767012731ACBD3B1007216BB /* TABModality.h */,
-				767012741ACBD3B1007216BB /* TABOperationDate.h */,
-				767012751ACBD3B1007216BB /* TABPagination.h */,
-				767012761ACBD3B1007216BB /* TABPax.h */,
-				767012771ACBD3B1007216BB /* TABPaymentInformation.h */,
-				767012781ACBD3B1007216BB /* TABPriceBreakdown.h */,
-				767012791ACBD3B1007216BB /* TABPriceSegment.h */,
-				7670127A1ACBD3B1007216BB /* TABQuestion.h */,
-				7670127B1ACBD3B1007216BB /* TABSdk.h */,
-				7670127C1ACBD3B1007216BB /* TABServerError.h */,
-				7670127D1ACBD3B1007216BB /* TABServerResponse.h */,
-				7670127E1ACBD3B1007216BB /* TABServiceDetail.h */,
-				7670127F1ACBD3B1007216BB /* TABServiceRequest.h */,
-				767012801ACBD3B1007216BB /* TABSupplement.h */,
-				767012811ACBD3B1007216BB /* TABSupplier.h */,
-				767012821ACBD3B1007216BB /* TABValuedActivity.h */,
-				767012831ACBD3B1007216BB /* TABVoucher.h */,
+				76169AD41B0DD52F00DD418C /* libTabSdk-ios.a */,
+				76169AD51B0DD52F00DD418C /* TABActivitiesClient.h */,
+				76169AD61B0DD52F00DD418C /* TABActivity.h */,
+				76169AD71B0DD52F00DD418C /* TABActivityDetailResponse.h */,
+				76169AD81B0DD52F00DD418C /* TABActivityListResponse.h */,
+				76169AD91B0DD52F00DD418C /* TABAnswer.h */,
+				76169ADA1B0DD52F00DD418C /* TABBarcode.h */,
+				76169ADB1B0DD52F00DD418C /* TABBookingCancelResponse.h */,
+				76169ADC1B0DD52F00DD418C /* TABBookingConfirmResponse.h */,
+				76169ADD1B0DD52F00DD418C /* TABBookingDetail.h */,
+				76169ADE1B0DD52F00DD418C /* TABBookingDetailResponse.h */,
+				76169ADF1B0DD52F00DD418C /* TABCancellationFee.h */,
+				76169AE01B0DD52F00DD418C /* TABCardInformation.h */,
+				76169AE11B0DD52F00DD418C /* TABComment.h */,
+				76169AE21B0DD52F00DD418C /* TABConfirmationCode.h */,
+				76169AE31B0DD52F00DD418C /* TABConstants.h */,
+				76169AE41B0DD52F00DD418C /* TABContractAnswer.h */,
+				76169AE51B0DD52F00DD418C /* TABContractQuestion.h */,
+				76169AE61B0DD52F00DD418C /* TABDescription.h */,
+				76169AE71B0DD52F00DD418C /* TABErrors.h */,
+				76169AE81B0DD52F00DD418C /* TABFee.h */,
+				76169AE91B0DD52F00DD418C /* TABHolder.h */,
+				76169AEA1B0DD52F00DD418C /* TABImage.h */,
+				76169AEB1B0DD52F00DD418C /* TABInvoiceCompany.h */,
+				76169AEC1B0DD52F00DD418C /* TABModality.h */,
+				76169AED1B0DD52F00DD418C /* TABNetworkClient.h */,
+				76169AEE1B0DD52F00DD418C /* TABOperationDate.h */,
+				76169AEF1B0DD52F00DD418C /* TABPagination.h */,
+				76169AF01B0DD52F00DD418C /* TABPax.h */,
+				76169AF11B0DD52F00DD418C /* TABPaxAnswer.h */,
+				76169AF21B0DD52F00DD418C /* TABPaxQuestion.h */,
+				76169AF31B0DD52F00DD418C /* TABPaymentInformation.h */,
+				76169AF41B0DD52F00DD418C /* TABPriceBreakdown.h */,
+				76169AF51B0DD52F00DD418C /* TABPriceSegment.h */,
+				76169AF61B0DD52F00DD418C /* TABQuestion.h */,
+				76169AF71B0DD52F00DD418C /* TABSdk.h */,
+				76169AF81B0DD52F00DD418C /* TABSeat.h */,
+				76169AF91B0DD52F00DD418C /* TABServerError.h */,
+				76169AFA1B0DD52F00DD418C /* TABServerResponse.h */,
+				76169AFB1B0DD52F00DD418C /* TABServiceDetail.h */,
+				76169AFC1B0DD52F00DD418C /* TABServiceRequest.h */,
+				76169AFD1B0DD52F00DD418C /* TABSupplement.h */,
+				76169AFE1B0DD52F00DD418C /* TABSupplier.h */,
+				76169AFF1B0DD52F00DD418C /* TABToken.h */,
+				76169B001B0DD52F00DD418C /* TABValuedActivity.h */,
+				76169B011B0DD52F00DD418C /* TABVoucher.h */,
 			);
 			name = TABSdk;
 			sourceTree = "<group>";

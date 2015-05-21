@@ -9,6 +9,10 @@
 #ifndef TabSdk_ios_TABSdk_h
 #define TabSdk_ios_TABSdk_h
 
+// mantle
+#import <Mantle/Mantle.h>
+// constants
+#import "TABConstants.h"
 // the client
 #import "TABActivitiesClient.h"
 // responses
@@ -26,7 +30,11 @@
 #import "TABOperationDate.h"
 #import "TABCancellationFee.h"
 #import "TABQuestion.h"
+#import "TABContractQuestion.h"
+#import "TABPaxQuestion.h"
 #import "TABAnswer.h"
+#import "TABContractAnswer.h"
+#import "TABPaxAnswer.h"
 #import "TABPax.h"
 #import "TABServiceRequest.h"
 #import "TABHolder.h"
@@ -47,5 +55,6 @@
 #import "TABPagination.h"
 #import "TABSeat.h"
 #import "TABCardInformation.h"
+#import "TABToken.h"
 
 #endif

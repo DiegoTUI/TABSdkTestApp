@@ -53,7 +53,7 @@
 /**
  The id of the TAB factsheet for the activity included in this service.
  */
-@property (strong, nonatomic, readonly) NSString *contentId;
+@property (strong, nonatomic, readonly) NSNumber *contentId;
 
 /**
  The start date of the service.

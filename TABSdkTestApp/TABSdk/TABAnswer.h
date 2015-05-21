@@ -10,7 +10,7 @@
 #import "TABQuestion.h"
 
 /**
- Model of an answer for an activity. Answers are needed as parameters of some requests.
+ Model of an answer for a question at the activity or operation date level. Answers are needed as parameters of some requests.
  */
 @interface TABAnswer : MTLModel<MTLJSONSerializing>
 

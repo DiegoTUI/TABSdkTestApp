@@ -74,7 +74,7 @@
  @param activityCode [required] An NSString with the ATLAS code of the activity. The service will return an error if ommitted.
  @param destination [required] An NSString with the ATLAS code of a destination. The service will return an error if ommitted.
  @param fromDate [optional] An NSDate object containing the start date for query. Only the year, month and day of the date will be used. Defaults to today.
- @param toDate [optional] An NSDate object containing the end date for query. Only the year, month and day of the date will be used. Defaults to today.
+ @param toDate [optional] An NSDate object containing the end date for query. Only the year, month and day of the date will be used. Defaults seven days from today.
  @param paxes [required] An array of TABPax objects to define the paxes of the activity. The service will return an error if ommitted.
  @param completion [required] A block to be executed when the operation finishes. Returns a TABValuedActivity embedded in a TABActivityDetailResponse object that might contain errors. Check that the response has no errors before doing anything with it.
  */
@@ -86,7 +86,7 @@
                          completion:(void (^)(TABActivityDetailResponse *response))completion;
 
 /**
- @methodName preconfirmBookingForServices:holder:customerReference:cardInformation:completion:
+ @methodName confirmBookingForServices:holder:customerReference:cardInformation:completion:
  @abstract Confirms a booking with the given parameters performing the payment
  @discussion This method send a confirmation request for the specified services and holder and performs the payment with the provided card information. An optional customerReference parameter may be included in case the customer wants to use his own booking references. It returns (through the completion folder) a TABBookingDetail object embedded in a TABBookingConfirmResponse object with the details of the confirmed booking. The status of this TABBookingDetail object is expected to be TABBookingStatusConfirmed.
  

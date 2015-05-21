@@ -65,6 +65,4 @@
  */
 @property (strong, nonatomic, readonly) NSArray *services;
 
-///*********************************TABServiceDetail********************************/////
-
 @end

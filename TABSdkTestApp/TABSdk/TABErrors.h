@@ -17,5 +17,8 @@
 // Services
 #define TAB_SKD_ERROR_CODE_INVALID_PARAMETER                        @"TAB_SKD_ERROR_CODE_INVALID_PARAMETER"
 
+// Errors coming from the server
+#define TAB_SERVER_E_ERROR_AUTH                                     @"E_ERROR_AUTH"
+
 
 #endif
