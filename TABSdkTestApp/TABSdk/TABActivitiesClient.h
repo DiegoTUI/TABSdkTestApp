@@ -92,7 +92,7 @@
  
  @param services [required] An NSArray of TABServiceRequest objects containing the services to be preconfirmed. The service will return an error if omitted, nil, empty of invalid.
  @param holder [required] A TABHolder object containing the information of the holder of the booking. The service will return an error if ommitted.
- @param customerReference [optional] A reference number provided by the customer in prder to keep track of the booking in their system. If provided, this customerReference will be returned in the booking confirm, booking detail and booking cancel operations
+ @param customerReference [optional] A reference number provided by the customer in prder to keep track of the booking in their system. If provided, this customerReference will be returned in the booking confirm, booking detail and booking cancel operations. This customer reference number can be used to check the booking status (using the fetchBookingDetailsForCustomerReference:holder:fromDate:toDate:completion: operation) in case bookingConfirm fails. IT HAS TO BE UNIQUE in order to do this.
  @param cardInformation [required] A TABCardInformation object containing the card information needed to perform the payment.
  @param completion [required] A block to be executed when the operation finishes. Returns a TABBookingDetail embedded in a TABBookingConfirmResponse object that might contain errors. Check that the response has no errors before doing anything with it.
  */
@@ -118,16 +118,16 @@
  @abstract Retrieves booking details for the given customer reference, holder and dates.
  @discussion This method retrieves the booking details for the given customer reference, holder and dates. You HAVE to provide a customer reference to the preconfirmBookingForServices:holder:customerReference:completion: if you want to use this method to retrieve the booking details. Holder, fromDate and toDate parameters are requires for security issues. It returns (through the completion folder) a TABBookingDetail object embedded in a TABBookingDetailResponse object with the details of the requested booking.
  
- @param customerReference [required] The customer reference provided to the preconfirmBookingForServices:holder:customerReference:completion: operation.
+ @param customerReference [required] The customer reference provided to the confirmBookingForServices:holder:customerReference:cardInformation:completion: operation.
  @param holder [required] The holder of the booking
- @param from [required] The start date of the booking
- @param to [required] The end date of the booking
+ @param from [required] The start date of any service in the booking. It has to be the same service used for the "to" parameter.
+ @param to [required] The end date of any service in the booking. It has to be the same service used for the "from" parameter.
  @param completion [required] A block to be executed when the operation finishes. Returns a TABBookingDetail object embedded in a TABBookingDetailResponse object that might contain errors. Check that the response has no errors before doing anything with it.
  */
 - (void)fetchBookingDetailsForCustomerReference:(NSString *)customerReference
                                          holder:(TABHolder *)holder
-                                       fromDate:(NSDate *)from
-                                         toDate:(NSDate *)to
+                                       fromDate:(NSDate *)fromDate
+                                         toDate:(NSDate *)toDate
                                      completion:(void (^)(TABBookingDetailResponse *response))completion;
 
 /**
@@ -141,21 +141,5 @@
 - (void)cancelBookingForReference:(NSString *)reference
                        completion:(void (^)(TABBookingCancelResponse *response))completion;
 
-/**
- @methodName cancelBookingForCustomerReference:holder:fromDate:toDate:completion:
- @abstract Cancels a booking defined by its customer reference, holder and dates.
- @discussion This method cancels a booking defined by its customer reference, holder and dates. You HAVE to provide a customer reference to the preconfirmBookingForServices:holder:customerReference:completion: if you want to use this method to cancel the booking. Holder, fromDate and toDate parameters are requires for security issues. It returns (through the completion folder) a TABCancellation object embedded in a TABBookingCancelResponse object with the results of the cancellation request..
- 
- @param customerReference [required] The customer reference provided to the preconfirmBookingForServices:holder:customerReference:completion: operation.
- @param holder [required] The holder of the booking
- @param from [required] The start date of the booking
- @param to [required] The end date of the booking
- @param completion [required] A block to be executed when the operation finishes. Returns a TABCancellation object embedded in a TABBookingCancelResponse object that might contain errors. Check that the response has no errors before doing anything with it.
- */
-- (void)cancelBookingForCustomerReference:(NSString *)customerReference
-                                   holder:(TABHolder *)holder
-                                 fromDate:(NSDate *)from
-                                   toDate:(NSDate *)to
-                               completion:(void (^)(TABBookingCancelResponse *response))completion;
 
 @end

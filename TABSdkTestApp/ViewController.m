@@ -34,7 +34,14 @@
     [offsetComponents setDay:35];
     __block NSDate *from = [[NSCalendar currentCalendar] dateByAddingComponents:offsetComponents toDate:now options:0];
     [offsetComponents setDay:7];
-    __block NSDate *to = [[NSCalendar currentCalendar] dateByAddingComponents:offsetComponents toDate:from options:0];;
+    __block NSDate *to = [[NSCalendar currentCalendar] dateByAddingComponents:offsetComponents toDate:from options:0];
+    // generate a random customerReference
+    NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    NSMutableString *randomString = [NSMutableString stringWithCapacity:16];
+    for (int i=0; i<16; i++) {
+        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length])]];
+    }
+    __block NSString *testCustomerReference = randomString;
     
     /*************************************************************************
      * Fetch activities for destination London.
@@ -48,6 +55,7 @@
             return;
         }
         NSLog(@"Operation id for activity list: %@", activityListResponse.operationId);
+        self.view.backgroundColor = [UIColor greenColor];
         // get first activity
         activity = activityListResponse.activities[0];
         
@@ -66,6 +74,7 @@
                 return;
             }
             NSLog(@"Operation id for activity detail: %@", activityDetailResponse.operationId);
+            self.view.backgroundColor = [UIColor yellowColor];
             // the user selects one modality and then one operation date
             operationDate = [(TABModality *)activityDetailResponse.activity.modalities[0] operationDates][0];
             
@@ -74,7 +83,7 @@
              *************************************************************************/
             
             // create a holder of the booking
-            TABHolder *holder = [[TABHolder alloc] initWithName:@"firstname" lastName:@"lastname"];
+            __block TABHolder *holder = [[TABHolder alloc] initWithName:@"firstname" lastName:@"lastname"];
             // create service request.
             // check for contract questions
             NSMutableArray *contractAnswers = [NSMutableArray array];
@@ -106,12 +115,13 @@
             TABCardInformation *cardInformation = [[TABCardInformation alloc] initWithCardHolder:@"AUTHORIZED" email:@"holycrap@holycrap.crap" phone:@"666333111" cardNumber:@"4444333322221111" cardType:TABCreditCardTypeVisa cvc:@"555" expirationMonth:expirationMonth expirationYear:expirationYear];
             // confirm the booking
             __block TABBookingDetail *bookingDetail;
-            [client confirmBookingForServices:@[serviceRequest] holder:holder customerReference:@"dummyCustomerReference" cardInformation:cardInformation completion:^(TABBookingConfirmResponse *bookingConfirmResponse) {
+            [client confirmBookingForServices:@[serviceRequest] holder:holder customerReference:testCustomerReference cardInformation:cardInformation completion:^(TABBookingConfirmResponse *bookingConfirmResponse) {
                 if (bookingConfirmResponse.errors.count) {
                     // do something about it
                     return;
                 }
                 NSLog(@"Operation id for booking confirm: %@", bookingConfirmResponse.operationId);
+                self.view.backgroundColor = [UIColor purpleColor];
                 bookingDetail = bookingConfirmResponse.booking;
                 
                 /*************************************************************************
@@ -123,6 +133,7 @@
                         return;
                     }
                     NSLog(@"Operation id for booking detail: %@", bookingDetailResponse.operationId);
+                    self.view.backgroundColor = [UIColor brownColor];
                     
                     /*************************************************************************
                      * Cancel the booking using TAB's reference
@@ -133,6 +144,20 @@
                             return;
                         }
                         NSLog(@"Operation id for booking cancel: %@", bookingCancelResponse.operationId);
+                        self.view.backgroundColor = [UIColor darkGrayColor];
+                        
+                        /*************************************************************************
+                         * Get the booking details using the customerReference
+                         *************************************************************************/
+                        __block TABServiceDetail *serviceDetail = bookingDetail.services[0];
+                        [client fetchBookingDetailsForCustomerReference:testCustomerReference holder:holder fromDate:serviceDetail.from toDate:serviceDetail.to completion:^(TABBookingDetailResponse *bookingDetailCustomerReferenceResponse) {
+                            if (bookingDetailCustomerReferenceResponse.errors.count) {
+                                // do something about it
+                                return;
+                            }
+                            NSLog(@"Operation id for booking detail by customer reference: %@", bookingDetailCustomerReferenceResponse.operationId);
+                            self.view.backgroundColor = [UIColor blackColor];
+                        }];
                     }];
                 }];
             }];
