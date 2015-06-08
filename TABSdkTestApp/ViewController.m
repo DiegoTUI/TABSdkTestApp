@@ -23,7 +23,9 @@
     // A simple booking cycle for the TABSDK
     
     // Init the client
-    TABActivitiesClient *client = [[TABActivitiesClient alloc] initWithAPIKey:@"VISITLONDON1234" andAPISecret:@"VISITLONDON1234"];
+    TABActivitiesClient *client = [[TABActivitiesClient alloc] initWithAPIKey:@"180915-1" andAPISecret:@"180915-1"];
+    // Set TEST environment
+    [client setEnvironment:TABEnvironmentTest];
     
     // Set the language for the client (defaults to en)
     client.language = @"en";
@@ -48,7 +50,6 @@
      *************************************************************************/
     
     __block TABActivity *activity;
-    NSLog(@"before fetchActivitiesForDestination: %@", API_URL);
     [client fetchActivitiesForDestination:@"LON" fromDate:from toDate:to pagination:nil completion:^(TABActivityListResponse *activityListResponse) {
         if (activityListResponse.errors.count) {
             // do something about it

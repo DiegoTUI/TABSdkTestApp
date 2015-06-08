@@ -12,6 +12,16 @@
 #import "TABErrors.h"
 
 /**
+ Environment (TEST or LIVE)
+ */
+typedef NS_ENUM(NSInteger, TABEnvironment) {
+    /// Unknown image size
+    TABEnvironmentLive = 0,
+    /// Extra large
+    TABEnvironmentTest
+};
+
+/**
  Image sizes.
  */
 typedef NS_ENUM(NSInteger, TABImageSize) {
@@ -44,6 +54,22 @@ typedef NS_ENUM(NSInteger, TABDescriptionType) {
 };
 
 /**
+ Activity types.
+ */
+typedef NS_ENUM(NSInteger, TABActivityType) {
+    /// Unknown modality type
+    TABActivityTypeUnknown = 0,
+    /// Ticket type
+    TABActivityTypeTicket,
+    /// Excursion type
+    TABActivityTypeExcursion,
+    /// Coche type
+    TABActivityTypeCoche,
+    /// Bundle type
+    TABActivityTypeBundle
+};
+
+/**
  Modality unit types.
  */
 typedef NS_ENUM(NSInteger, TABModalityUnitType) {
@@ -53,16 +79,6 @@ typedef NS_ENUM(NSInteger, TABModalityUnitType) {
     TABModalityUnitTypePax,
     /// Service type
     TABModalityUnitTypeService
-};
-
-/**
- Modality types.
- */
-typedef NS_ENUM(NSInteger, TABModalityType) {
-    /// Unknown modality type
-    TABModalityTypeUnknown = 0,
-    /// Ticket type
-    TABModalityTypeTicket
 };
 
 /**
@@ -121,18 +137,10 @@ typedef NS_ENUM(NSInteger, TABPaxQuestionCode) {
 // empty string
 #define EMPTY_STRING @""
 
-// base url
-#if (DEBUG || TESTING)
-#define API_URL @"http://sa3dmt01.hotelbeds:23002/actdis-api/public/v1/"
-#define OSC_URL @"http://wl3mpt01.hotelbeds:7009/actapi/"
-#else
-#define API_URL @"https://activitiesapi.activitiesbank.com/v1/"
-#define OSC_URL @"https://osc.activitiesbank.com/v1/"
-#endif
 
 // Test API key and secret
-#define TEST_SDK_API_KEY @"VISITLONDON1234"
-#define TEST_SDK_API_SECRET @"VISITLONDON1234"
+#define TEST_SDK_API_KEY @"180915-1"
+#define TEST_SDK_API_SECRET @"180915-1"
 #define TEST_SDK_DESTINATION @"LON"
 
 #endif

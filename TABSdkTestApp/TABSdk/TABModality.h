@@ -24,11 +24,6 @@
 @property (strong, nonatomic, readonly) NSString *name;
 
 /**
- The type of the modality
- */
-@property (nonatomic) TABModalityType type;
-
-/**
  The unit type of the modality
  */
 @property (nonatomic) TABModalityUnitType unitType;

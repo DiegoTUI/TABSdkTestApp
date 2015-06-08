@@ -21,7 +21,7 @@
 /**
  The description of the error
  */
-@property (strong, nonatomic, readonly) NSString *description;
+@property (strong, nonatomic, readonly) NSString *text;
 
 /**
  @methodName initWithGenericError

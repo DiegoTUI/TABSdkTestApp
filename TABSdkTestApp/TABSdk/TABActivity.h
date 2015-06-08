@@ -23,6 +23,11 @@
 @property (strong, nonatomic, readonly) NSString *name;
 
 /**
+ The type of the activity
+ */
+@property (nonatomic) TABActivityType type;
+
+/**
  The short description of the activity
  */
 @property (strong, nonatomic, readonly) NSString *shortDescription;

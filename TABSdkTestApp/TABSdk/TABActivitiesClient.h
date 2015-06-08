@@ -22,6 +22,10 @@
  */
 @interface TABActivitiesClient : NSObject
 
+/**
+ Environment for all requests: defaults to TABEnvironmentLive
+ */
+@property (nonatomic) TABEnvironment environment;
 
 /**
  Language for all requests: defaults to ENG
@@ -97,7 +101,7 @@
  @param completion [required] A block to be executed when the operation finishes. Returns a TABBookingDetail embedded in a TABBookingConfirmResponse object that might contain errors. Check that the response has no errors before doing anything with it.
  */
 - (void)confirmBookingForServices:(NSArray *)services
-                            holder:(TABHolder *)holder
+                           holder:(TABHolder *)holder
                 customerReference:(NSString *)customerReference
                   cardInformation:(TABCardInformation *)cardInformation
                        completion:(void (^)(TABBookingConfirmResponse *response))completion;
@@ -120,8 +124,8 @@
  
  @param customerReference [required] The customer reference provided to the confirmBookingForServices:holder:customerReference:cardInformation:completion: operation.
  @param holder [required] The holder of the booking
- @param from [required] The start date of any service in the booking. It has to be the same service used for the "to" parameter.
- @param to [required] The end date of any service in the booking. It has to be the same service used for the "from" parameter.
+ @param fromDate [required] The start date of any service in the booking. It has to be the same service used for the "to" parameter.
+ @param toDate [required] The end date of any service in the booking. It has to be the same service used for the "from" parameter.
  @param completion [required] A block to be executed when the operation finishes. Returns a TABBookingDetail object embedded in a TABBookingDetailResponse object that might contain errors. Check that the response has no errors before doing anything with it.
  */
 - (void)fetchBookingDetailsForCustomerReference:(NSString *)customerReference
