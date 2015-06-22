@@ -50,7 +50,7 @@
 @property (strong, nonatomic, readonly) NSArray *modalities;
 
 /**
- Contract questions for this activity. This is an array of TABQuestion objects.
+ Contract questions for this activity. This is an array of TABContractQuestion objects.
  */
 @property (strong, nonatomic, readonly) NSArray *questions;
 

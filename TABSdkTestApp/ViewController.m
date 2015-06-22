@@ -8,10 +8,13 @@
 
 #import <Mantle/Mantle.h>
 #import "ViewController.h"
-#import "TABConstants.h"
+//#import "TABConstants.h"
 #import "TABSdk.h"
+#import "TABActivitiesClient.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) TABActivitiesClient *client;
 
 @end
 
@@ -23,12 +26,12 @@
     // A simple booking cycle for the TABSDK
     
     // Init the client
-    TABActivitiesClient *client = [[TABActivitiesClient alloc] initWithAPIKey:@"180915-1" andAPISecret:@"180915-1"];
+    _client = [[TABActivitiesClient alloc] initWithAPIKey:@"180915-1" andAPISecret:@"180915-1"];
     // Set TEST environment
-    [client setEnvironment:TABEnvironmentTest];
+    [_client setEnvironment:TABEnvironmentTest];
     
     // Set the language for the client (defaults to en)
-    client.language = @"en";
+    _client.language = @"en";
     
     // set the dates
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
@@ -41,7 +44,7 @@
     NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     NSMutableString *randomString = [NSMutableString stringWithCapacity:16];
     for (int i=0; i<16; i++) {
-        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length])]];
+        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform((unsigned int)[letters length])]];
     }
     __block NSString *testCustomerReference = randomString;
     
@@ -50,7 +53,7 @@
      *************************************************************************/
     
     __block TABActivity *activity;
-    [client fetchActivitiesForDestination:@"LON" fromDate:from toDate:to pagination:nil completion:^(TABActivityListResponse *activityListResponse) {
+    [_client fetchActivitiesForDestination:@"LON" fromDate:from toDate:to pagination:nil completion:^(TABActivityListResponse *activityListResponse) {
         if (activityListResponse.errors.count) {
             // do something about it
             return;
@@ -69,7 +72,7 @@
          *************************************************************************/
         
         __block TABOperationDate *operationDate;
-        [client fetchDetailsForActivityCode:activity.code inDestination:@"LON" fromDate:from toDate:to paxes:paxes completion:^(TABActivityDetailResponse *activityDetailResponse) {
+        [_client fetchDetailsForActivityCode:activity.code inDestination:@"LON" fromDate:from toDate:to paxes:paxes completion:^(TABActivityDetailResponse *activityDetailResponse) {
             if (activityDetailResponse.errors.count) {
                 // do something about it
                 return;
@@ -116,7 +119,7 @@
             TABCardInformation *cardInformation = [[TABCardInformation alloc] initWithCardHolder:@"AUTHORIZED" email:@"holycrap@holycrap.crap" phone:@"666333111" cardNumber:@"4444333322221111" cardType:TABCreditCardTypeVisa cvc:@"555" expirationMonth:expirationMonth expirationYear:expirationYear];
             // confirm the booking
             __block TABBookingDetail *bookingDetail;
-            [client confirmBookingForServices:@[serviceRequest] holder:holder customerReference:testCustomerReference cardInformation:cardInformation completion:^(TABBookingConfirmResponse *bookingConfirmResponse) {
+            [_client confirmBookingForServices:@[serviceRequest] holder:holder customerReference:testCustomerReference cardInformation:cardInformation completion:^(TABBookingConfirmResponse *bookingConfirmResponse) {
                 if (bookingConfirmResponse.errors.count) {
                     // do something about it
                     return;
@@ -128,7 +131,7 @@
                 /*************************************************************************
                  * Check booking details using TAB's reference
                  *************************************************************************/
-                [client fetchBookingDetailsForReference:bookingDetail.reference completion:^(TABBookingDetailResponse *bookingDetailResponse) {
+                [_client fetchBookingDetailsForReference:bookingDetail.reference completion:^(TABBookingDetailResponse *bookingDetailResponse) {
                     if (bookingDetailResponse.errors.count) {
                         // do something about it
                         return;
@@ -139,7 +142,7 @@
                     /*************************************************************************
                      * Cancel the booking using TAB's reference
                      *************************************************************************/
-                    [client cancelBookingForReference:bookingDetail.reference completion:^(TABBookingCancelResponse *bookingCancelResponse) {
+                    [_client cancelBookingForReference:bookingDetail.reference completion:^(TABBookingCancelResponse *bookingCancelResponse) {
                         if (bookingCancelResponse.errors.count) {
                             // do something about it
                             return;
@@ -151,7 +154,7 @@
                          * Get the booking details using the customerReference
                          *************************************************************************/
                         __block TABServiceDetail *serviceDetail = bookingDetail.services[0];
-                        [client fetchBookingDetailsForCustomerReference:testCustomerReference holder:holder fromDate:serviceDetail.from toDate:serviceDetail.to completion:^(TABBookingDetailResponse *bookingDetailCustomerReferenceResponse) {
+                        [_client fetchBookingDetailsForCustomerReference:testCustomerReference holder:holder fromDate:serviceDetail.from toDate:serviceDetail.to completion:^(TABBookingDetailResponse *bookingDetailCustomerReferenceResponse) {
                             if (bookingDetailCustomerReferenceResponse.errors.count) {
                                 // do something about it
                                 return;

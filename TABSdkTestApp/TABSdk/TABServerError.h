@@ -61,13 +61,12 @@
 - (id)initWithInvalidParameter:(NSString *)parameter;
 
 /**
- @methodName initWithNSError:
- @abstract Creates a TABServerError with an NSError.
- @discussion This method creates a TABServerError with a given NSError.
+ @methodName initWithJsonParsingError
+ @abstract Creates a JSON parsing TABServerError.
+ @discussion This method creates a JSON parsing TABServerError.
  
- @param error [required] The NSError to create the TABServerError
  @return An instance of the initialized server error.
  */
-- (id)initWithNSError:(NSError *)error;
+- (id)initWithJsonParsingError;
 
 @end

@@ -49,7 +49,7 @@
 @property (strong, nonatomic, readonly) NSArray *paxPrices;
 
 /**
- An NSArray of TABQuestions objects needed to complete the booking for each pax.
+ An NSArray of TABPaxQuestions objects needed to complete the booking for each pax.
  */
 @property (strong, nonatomic, readonly) NSArray *questions;
 

@@ -20,7 +20,7 @@
 @property (strong, nonatomic, readonly) TABValuedActivity *activity;
 
 /**
- The time (in seconds) until the token(s) returned in the response expire.
+ The time (in seconds) until the purchaseableActivityId(s) returned in the response expire.
  */
 @property (strong, nonatomic, readonly) NSNumber *timeToExpiration;
 

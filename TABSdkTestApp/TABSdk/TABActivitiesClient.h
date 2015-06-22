@@ -96,7 +96,7 @@
  
  @param services [required] An NSArray of TABServiceRequest objects containing the services to be preconfirmed. The service will return an error if omitted, nil, empty of invalid.
  @param holder [required] A TABHolder object containing the information of the holder of the booking. The service will return an error if ommitted.
- @param customerReference [optional] A reference number provided by the customer in prder to keep track of the booking in their system. If provided, this customerReference will be returned in the booking confirm, booking detail and booking cancel operations. This customer reference number can be used to check the booking status (using the fetchBookingDetailsForCustomerReference:holder:fromDate:toDate:completion: operation) in case bookingConfirm fails. IT HAS TO BE UNIQUE in order to do this.
+ @param customerReference [optional] A reference number provided by the customer in prder to keep track of the booking in their system. If provided, this customerReference will be returned in the booking confirm, booking detail and booking cancel operations. This customer reference number can be used to check the booking status (using the fetchBookingDetailsForCustomerReference:holder:fromDate:toDate:completion: operation) in case bookingConfirm fails. IT HAS TO BE UNIQUE in order to do this. There is a DB enforced limit of 20 chars for this parameter.
  @param cardInformation [required] A TABCardInformation object containing the card information needed to perform the payment.
  @param completion [required] A block to be executed when the operation finishes. Returns a TABBookingDetail embedded in a TABBookingConfirmResponse object that might contain errors. Check that the response has no errors before doing anything with it.
  */
