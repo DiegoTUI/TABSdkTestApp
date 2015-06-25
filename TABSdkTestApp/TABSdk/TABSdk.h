@@ -36,6 +36,7 @@
 #import "TABContractAnswer.h"
 #import "TABPaxAnswer.h"
 #import "TABPax.h"
+#import "TABPaxRequest.h"
 #import "TABServiceRequest.h"
 #import "TABHolder.h"
 #import "TABBookingDetail.h"

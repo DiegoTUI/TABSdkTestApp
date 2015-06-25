@@ -72,6 +72,7 @@
 		76169AFF1B0DD52F00DD418C /* TABToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABToken.h; path = TABSdk/TABToken.h; sourceTree = "<group>"; };
 		76169B001B0DD52F00DD418C /* TABValuedActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABValuedActivity.h; path = TABSdk/TABValuedActivity.h; sourceTree = "<group>"; };
 		76169B011B0DD52F00DD418C /* TABVoucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TABVoucher.h; path = TABSdk/TABVoucher.h; sourceTree = "<group>"; };
+		762AE4561B3C00B600350A7E /* TABPaxRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TABPaxRequest.h; path = TABSdk/TABPaxRequest.h; sourceTree = "<group>"; };
 		767012251ACBD2C3007216BB /* TABSdkTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TABSdkTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		767012291ACBD2C3007216BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7670122A1ACBD2C3007216BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -217,6 +218,7 @@
 				76169AEE1B0DD52F00DD418C /* TABOperationDate.h */,
 				76169AEF1B0DD52F00DD418C /* TABPagination.h */,
 				76169AF01B0DD52F00DD418C /* TABPax.h */,
+				762AE4561B3C00B600350A7E /* TABPaxRequest.h */,
 				76169AF11B0DD52F00DD418C /* TABPaxAnswer.h */,
 				76169AF21B0DD52F00DD418C /* TABPaxQuestion.h */,
 				76169AF31B0DD52F00DD418C /* TABPaymentInformation.h */,

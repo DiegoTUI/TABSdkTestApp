@@ -65,7 +65,7 @@
         
         // Now fetch activity details
         // create paxes (just one adult)
-        __block NSArray *paxes = @[[[TABPax alloc] initWithAge:@30]];
+        __block NSArray *paxes = @[[[TABPaxRequest alloc] initWithAge:@30]];
         
         /*************************************************************************
          * Get details for the selected activity

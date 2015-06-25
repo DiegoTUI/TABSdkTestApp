@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- Model of a service request used as a parameter to preconfirm a booking.
+ Model of a service request used as a parameter to confirm a booking.
  It specifies all the details of a service to be booked.
  */
 @interface TABServiceRequest : MTLModel<MTLJSONSerializing>
@@ -20,7 +20,7 @@
 @property (strong, nonatomic, readonly) NSString *purchaseableServiceId;
 
 /**
- The paxes to be booked. This is an array of TABPax objects. Only needed if the TABValuedActivity object returned by the activity detail operation returned pax questions in the selected operation date.
+ The paxes to be booked. This is an array of TABPaxRequest objects. Only needed if the TABValuedActivity object returned by the activity detail operation returned pax questions in the selected operation date.
  */
 @property (strong, nonatomic, readonly) NSArray *paxesInformation;
 
