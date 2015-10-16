@@ -159,7 +159,7 @@
                                 // do something about it
                                 return;
                             }
-                            NSLog(@"Operation id for booking detail by customer reference: %@", bookingDetailCustomerReferenceResponse.operationId);
+                            NSLog(@"Operation id for ˇ: %@", bookingDetailCustomerReferenceResponse.operationId);
                             self.view.backgroundColor = [UIColor blackColor];
                         }];
                     }];

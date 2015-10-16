@@ -19,7 +19,7 @@
 @property (strong, nonatomic, readonly) NSDate *from;
 
 /**
- The start date where the cancellation fee applies. Take into account hours and minutes in the date. The date and time is referred to Z-time.
+ The end date where the cancellation fee applies. Take into account hours and minutes in the date. The date and time is referred to Z-time.
  */
 @property (strong, nonatomic, readonly) NSDate *to;
 
